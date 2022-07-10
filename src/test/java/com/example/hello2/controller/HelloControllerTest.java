@@ -39,14 +39,12 @@ public class HelloControllerTest {
     @Test
     public void stock_가져오기() throws Exception {
         //given
-        String test = "coinList";
 
         //when
 
         //then
         mvc.perform(get("/list"))
                 .andExpect(status().isOk());
-        assertThat(test).isEqualTo(helloController.coinList());
 
     }
 }
